@@ -1,0 +1,42 @@
+{
+  "msg": "success",
+  "result": {
+    "task_data": [
+        {
+          "img":"http://xrk.goldflow.cn/app/images/task/task1.png",
+          "title":"一周小目标.闯10关",
+          "detail":"这周给自己一个flag？",
+          "reward":"英语",
+          "key":1
+      },
+      {
+        "img":"http://xrk.goldflow.cn/app/images/task/task2.png",
+        "title":"共克时艰，战疫助学",
+        "detail":"停课不停学，隔空不隔爱",
+        "reward":"英语",
+        "key":2
+      },
+      {
+        "img":"http://xrk.goldflow.cn/app/images/task/task3.png",
+          "title":"每日闯关任务",
+          "detail":"",
+          "reward":"英语",
+          "key":3
+      },
+      {
+        "img":"http://xrk.goldflow.cn/app/images/task/task4.png",
+          "title":"每日复习任务",
+          "detail":"",
+          "reward":"英语",
+          "key":4
+      },
+      {
+        "img":"http://xrk.goldflow.cn/app/images/task/task1.png",
+          "title":"每日学习任务",
+          "detail":"",
+          "reward":"英语",
+          "key":5
+      }
+      ]
+  }
+}
