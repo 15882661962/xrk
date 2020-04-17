@@ -42,7 +42,7 @@ class LoginScene extends React.Component{
         var params = {
             userName: userName,
             password: password,
-            partnerId:9
+            partnerId:99
         }
         Request.get(url,params).then((json)=>{
             var userInfo=json.Data
@@ -55,7 +55,7 @@ class LoginScene extends React.Component{
         var url='api/wechat/GetWechatUserInfo'
         var params = {
             code: code,
-            partnerId:9
+            partnerId:99
         }
         Request.get(url,params).then((json)=>{
             var userInfo=json.Data
@@ -68,7 +68,7 @@ class LoginScene extends React.Component{
         var url='api/user/FirstOrDefault'
         var params = {
             userName: userName,
-            partnerId: 9,
+            partnerId: 99
         }
         Request.get(url,params).then((json)=>{
             Loading.show();

@@ -1,4 +1,4 @@
-package com.bbw.xrk;
+package com.goldflow.xrk;
 
 import com.facebook.react.ReactActivity;
 

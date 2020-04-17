@@ -1,4 +1,4 @@
-package com.bbw.xrk;
+package com.goldflow.xrk;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,6 +6,13 @@ import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import org.wonday.aliyun.push.AliyunPushPackage;
+
+import com.alibaba.sdk.android.push.CloudPushService;
+import com.alibaba.sdk.android.push.CommonCallback;
+import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
+// import com.alibaba.sdk.android.push.register.HuaWeiRegister;
+import com.alibaba.sdk.android.push.register.MiPushRegister;
+
 import cn.jiguang.plugins.push.JPushPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -32,6 +39,8 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          // packages.add(new RNCameraPackage());
+          // packages.add(new AliyunPushPackage());
           return packages;
         }
 
@@ -51,6 +60,22 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+    this.initCloudChannel();
+  }
+
+  private void initCloudChannel(){
+    PushServiceFactory.init(this.getApplicationContext());
+    CloudPushService pushService=PushServiceFactory.getCloudPushService();
+    pushService.setNotificationSmallIcon(R.mipmap.ic_launcher);
+    pushService.register(this.getApplicationContext(),"appKey","appSecret",new CommonCallback(){
+      @Override public void onSuccess(String response){
+
+      }
+      @Override public void onFailed(String code, String message){
+
+      }
+    });
+    MiPushRegister.register(this.getApplicationContext(),"小米AppID","小米AppKey");
   }
 
   /**

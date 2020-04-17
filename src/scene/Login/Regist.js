@@ -38,7 +38,7 @@ class Regist extends React.Component{
     regist(){
         var url='api/user/Register'
         var params = {
-            partnerId: 3,
+            partnerId: 99,
             mobileNum: this.state.mobileNum,
             checkCode: this.state.checkcode,
             nickname: '',
@@ -55,7 +55,7 @@ class Regist extends React.Component{
         var url="api/tools/ShowCheckcode"
         var params = {
             userName: this.state.mobileNum,
-            partnerId: 3,
+            partnerId: 99,
             mobileNum: this.state.mobileNum
         }
         Request.get(url,params).then((json)=>{

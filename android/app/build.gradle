@@ -78,6 +78,11 @@ import com.android.build.OutputFile
 project.ext.react = [
     entryFile: "index.js",
     enableHermes: false,  // clean and rebuild if changing
+    bundleAssetName:"index.android.bundle",
+    bundleInDebug:true,
+    bundleInRelease:true
+    // bundleInAlpha:true,
+    // bundleInBeta:true
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -128,11 +133,16 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.bbw.xrk"
+        applicationId "com.goldflow.xrk"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+        missingDimensionStrategy 'react-native-camera','general'
+        ndk {
+            abiFilters  'arm64-v8a', 'armeabi', 'armeabi-v7a', 'mips', 'mips64', 'x86', 'x86_64'
+        }
     }
     splits {
         abi {
@@ -179,6 +189,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-camera')
     implementation project(':react-native-webview')
     implementation project(':react-native-aliyun-push')
     implementation project(':jpush-react-native')
@@ -188,7 +199,8 @@ dependencies {
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.aliyun.ams:alicloud-android-push:3.1.9'
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
