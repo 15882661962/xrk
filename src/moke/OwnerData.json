@@ -4,7 +4,7 @@
     "owner_data": {
       "doubt":{
         "typeClass":"doubt",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-doubt.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-doubt.png",
         "title":"回答问题",
         "isMore":true,
         "more":"更多问题",
@@ -30,7 +30,7 @@
       },
       "enjoy":{
         "typeClass":"enjoy",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-enjoy.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-enjoy.png",
         "title":"你可能感兴趣的圈子",
         "isMore":true,
         "more":"去圈子广场",
@@ -38,29 +38,29 @@
         "data":[
               {
                 "title":"FPX圈",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy1.png"
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy1.png"
               },
               {
                 "title":"雅思交流圈",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy2.png"
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy2.png"
               },
               {
                 "title":"我们都是故事迷",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy3.png"
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy3.png"
               },
               {
                 "title":"觉主和她的朋友",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy4.png"
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy4.png"
               },
               {
                 "title":"奇葩说6",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy5.png"
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy5.png"
               }
           ]
       },
       "video":{
         "typeClass":"video",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-video.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-video.png",
         "title":"视频回答",
         "isMore":false,
         "more":"去圈子广场",
@@ -68,31 +68,31 @@
         "data":[
               {
                 "title":"急求：游戏重要还是女朋友重要？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy1.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy1.png",
                 "answer":8,
                 "account":52
               },
               {
                 "title":"王者荣耀为什么都不愿意打辅助？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy2.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy2.png",
                 "answer":8,
                 "account":52
               },
               {
                 "title":"男朋友不喜欢猫，我应该把猫送走吗？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy3.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy3.png",
                 "answer":8,
                 "account":52
               },
               {
                 "title":"你为什么不喜欢詹青云？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy4.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy4.png",
                 "answer":8,
                 "account":52
               },
               {
                 "title":"有没有什么好看的剧推荐？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy5.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy5.png",
                 "answer":8,
                 "account":52
               }
@@ -100,7 +100,7 @@
       },
       "idea":{
         "typeClass":"idea",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-idea.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-idea.png",
         "title":"想法",
         "isMore":false,
         "more":"去圈子广场",
@@ -140,7 +140,7 @@
       },
       "feature":{
         "typeClass":"feature",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-feature.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-feature.png",
         "title":"专题",
         "isMore":false,
         "more":"查看更多",
@@ -148,31 +148,31 @@
         "data":[
               {
                 "title":"谣言止于智者",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy1.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy1.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"如何看5G时代下自动驾驶技术？",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy2.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy2.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"2020上海两会",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy3.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy3.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"你的春节代办清单",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy4.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy4.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"留学，光鲜中的努力",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy5.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy5.png",
                 "scan":8,
                 "account":52
               }
@@ -180,7 +180,7 @@
       },
       "table":{
         "typeClass":"table",
-        "icon":"http://image.xrkgxw.com/img/app/owner/icon-table.png",
+        "icon":"http://xrk.goldflow.cn/app/images/owner/icon-table.png",
         "title":"圆桌",
         "isMore":true,
         "more":"查看更多",
@@ -188,31 +188,31 @@
         "data":[
               {
                 "title":"中国在哪些领域还不够强大",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy1.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy1.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"自动控制的挑战与未来",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy2.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy2.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"2020《英雄联盟》新赛季启幕",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy3.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy3.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"春节假期，法律锦囊",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy4.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy4.png",
                 "scan":8,
                 "account":52
               },
               {
                 "title":"《庆余年》，叶清眉的故事",
-                "img":"http://image.xrkgxw.com/img/app/owner/enjoy5.png",
+                "img":"http://xrk.goldflow.cn/app/images/owner/enjoy5.png",
                 "scan":8,
                 "account":52
               }

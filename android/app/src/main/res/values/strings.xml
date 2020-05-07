@@ -1,6 +1,3 @@
 <resources>
-    <string moduleConfig="true" name="CodePushDeploymentKey">Z27hj_SXGNiqNpBYpua7tEJT9lzVorjLLKVTSd</string>
-    <!-- <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">Z27hj_SXGNiqNpBYpua7tEJT9lzVorjLLKVTSd</string> -->
-    <!-- <string moduleConfig="true" name="CodePushServerUrl">http://www.7uao.com</string> -->
     <string name="app_name">向日葵</string>
 </resources>

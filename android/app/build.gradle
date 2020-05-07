@@ -86,7 +86,6 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -101,7 +100,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = false
 
 /**
  * The preferred build flavor of JavaScriptCore.
@@ -138,16 +137,12 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.0"
         multiDexEnabled true
         missingDimensionStrategy 'react-native-camera','general'
         ndk {
             abiFilters  'arm64-v8a', 'armeabi', 'armeabi-v7a', 'mips', 'mips64', 'x86', 'x86_64'
         }
-        manifestPlaceholders=[
-            JPUSH_APPKEY:"00a8fb0363cf7f679e963b00",
-            JPUSH_CHANNEL:"developer-default"
-        ]
     }
     splits {
         abi {
@@ -164,33 +159,17 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release{
-            storeFile file(MYAPP_RELEASE_STORE_FILE)
-            storePassword MYAPP_RELEASE_STORE_PASSWORD
-            keyAlias MYAPP_RELEASE_KEY_ALIAS
-            keyPassword MYAPP_RELEASE_KEY_PASSWORD
-        }
     }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-            buildConfigField "String","CODEPUSH_KEY",'""'
-            matchingFallbacks = ['release', 'preview', 'debug']
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
-            shrinkResources false
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            buildConfigField "String","CODEPUSH_KEY",'"Z27hj_SXGNiqNpBYpua7tEJT9lzVorjLLKVTSd"'
-            matchingFallbacks = ['release', 'preview', 'debug']
-        }
-        releaseStaging {
-            initWith release
-            buildConfigField "String","CODEPUSH_KEY",'"lljRg0WflyTalL7FWxWSGudoa622gHIFB1quJ"'
-            matchingFallbacks = ['release', 'preview', 'debug']
         }
     }
     // applicationVariants are e.g. debug, release
@@ -207,26 +186,13 @@ android {
 
         }
     }
-    packagingOptions {
-        exclude "lib/armeabi/**"
-        doNotStrip "*/armeabi/*.so"
-        doNotStrip "*/armeabi-v7a/*.so"
-        doNotStrip "*/arm64-v8a/*.so"
-        doNotStrip "*/x86/*.so"
-        doNotStrip "*/x86_64/*.so"
-        doNotStrip "*/mips/*.so"
-        doNotStrip "*/mips64/*.so"
-    }
 }
 
 dependencies {
-    implementation project(':react-native-code-push')
     implementation project(':react-native-camera')
     implementation project(':react-native-webview')
     implementation project(':react-native-aliyun-push')
     implementation project(':jpush-react-native')
-    implementation project(':jcore-react-native')
-    implementation project(':react-native-splash-screen')
     implementation project(':react-native-image-picker')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-wechat')

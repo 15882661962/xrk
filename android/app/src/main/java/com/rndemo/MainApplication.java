@@ -13,10 +13,7 @@ import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
 // import com.alibaba.sdk.android.push.register.HuaWeiRegister;
 import com.alibaba.sdk.android.push.register.MiPushRegister;
 
-import com.microsoft.codepush.react.CodePush;
-import cn.jiguang.plugins.push.JPushModule;//JPushPackage;
-// import cn.jpush.android.api.JPushInterface;
-// import cn.jpush.reactnativejpush.JPushPackage;
+import cn.jiguang.plugins.push.JPushPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.theweflex.react.WeChatPackage;
@@ -26,20 +23,11 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.facebook.react.shell.MainReactPackage;
-import java.util.Arrays;
 
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
-        @Override
-        public String getJSBundleFile() {
-          return CodePush.getJSBundleFile();
-        }
-        // protected String getJSBundleFile(){
-        //   return CodePush.getJSBundleFile();
-        // }
         @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
@@ -53,11 +41,6 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           // packages.add(new RNCameraPackage());
           // packages.add(new AliyunPushPackage());
-          // packages.add(new CodePush(
-          //     getResources().getString(R.string.CodePushDeploymentKey),
-          //     getApplicationContext(),
-          //     BuildConfig.DEBUG
-          // ));
           return packages;
         }
 
@@ -76,7 +59,6 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
-    JPushModule.registerActivityLifecycle(this);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
     this.initCloudChannel();
   }
