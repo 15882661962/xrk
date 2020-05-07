@@ -5,9 +5,9 @@ import {
     StyleSheet,
     Image,
     FlatList,
-    Dimensions
+    Dimensions,
+    TouchableOpacity
 } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 const width=Dimensions.get('window').width;
 let gridData=[
     {

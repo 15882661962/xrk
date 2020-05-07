@@ -3,30 +3,30 @@ import {
   View,
   Text,
   Image,
-  StyleSheet, 
+  StyleSheet,
   Animated,
   Dimensions,
   TouchableOpacity
 } from 'react-native';
-import * as WeChat from 'react-native-wechat'
-const {width,height}=Dimensions.get('window')
-const appid='wx88ab517a21d1a79d'
+import * as WeChat from 'react-native-wechat';
+const {width,height}=Dimensions.get('window');
+const appid='wx88ab517a21d1a79d';
 class SetShare extends Component {
- 
+
   constructor(props) {
-    super(props)
- 
+    super(props);
+
     this.state = {
       securetyTipViewY: new Animated.Value(height),
-    }
+    };
   }
- 
+
   componentDidMount() {
-    this._showTipView()
+    this._showTipView();
     WeChat.registerApp(appid)
     .then(function(){
         //return WeChat.openWXApp()
-    })
+    });
   }
 
   _showTipView = () => {
@@ -38,7 +38,7 @@ class SetShare extends Component {
       }
     ).start();
   }
- 
+
   _hiddenTipView = () => {
     Animated.timing(
       this.state.securetyTipViewY,
@@ -47,7 +47,7 @@ class SetShare extends Component {
         duration: 500,
       }).start();
   }
- 
+
   closeShare(){
     Animated.timing(
         this.state.securetyTipViewY,
@@ -57,7 +57,7 @@ class SetShare extends Component {
         }
     ).start(
       this.props.closeShare()
-    )
+    );
   }
   wxShare(){
       WeChat.isWXAppInstalled()
@@ -69,15 +69,15 @@ class SetShare extends Component {
                   imageUrl: 'http://xrk.goldflow.cn/app/images/share.png'
               })
               .catch((error)=>{
-                  alert(error.message)
-              })
+                  alert(error.message);
+              });
           }else{
-              alert('请先安装微信')
+              alert('请先安装微信');
           }
       })
       .catch((error)=>{
-        alert(error)
-      })
+        alert(error);
+      });
   }
 
   pyqShare(){
@@ -98,16 +98,16 @@ class SetShare extends Component {
               alert('请安装微信');
           }
       }).catch((error)=>{
-        alert(error)
+        alert(error);
       });
   }
 
   wbShare(){
-      alert('分享到微博')
+      alert('分享到微博');
   }
 
   qqShare(){
-      alert('分享到QQ')
+      alert('分享到QQ');
   }
 
   render() {
@@ -116,10 +116,10 @@ class SetShare extends Component {
         <Animated.View  style={[{top: this.state.securetyTipViewY},styles.content]}>
         <View style={styles.sharePlat}>
             <View>
-                <TouchableOpacity 
+                <TouchableOpacity
                 style={styles.plats}
                 onPress={()=>{
-                    this.wxShare()
+                    this.wxShare();
                 }}
                 >
                     <Image
@@ -133,7 +133,7 @@ class SetShare extends Component {
                 <TouchableOpacity
                 style={styles.plats}
                 onPress={()=>{
-                    this.pyqShare()
+                    this.pyqShare();
                 }}
                 >
                 <Image
@@ -144,10 +144,10 @@ class SetShare extends Component {
                 <Text style={styles.platstext}>朋友圈</Text>
             </View>
             <View>
-                <TouchableOpacity 
+                <TouchableOpacity
                 style={styles.plats}
                 onPress={()=>{
-                    this.wbShare()
+                    this.wbShare();
                 }}
                 >
                 <Image
@@ -158,10 +158,10 @@ class SetShare extends Component {
                 <Text style={styles.platstext}>微博</Text>
             </View>
             <View>
-                  <TouchableOpacity 
+                  <TouchableOpacity
                   style={styles.plats}
                   onPress={()=>{
-                      this.qqShare()
+                      this.qqShare();
                   }}
                   >
                   <Image
@@ -172,14 +172,14 @@ class SetShare extends Component {
                   <Text style={styles.platstext}>QQ</Text>
               </View>
           </View>
-          <TouchableOpacity 
+          <TouchableOpacity
           style={styles.cancelbtn}
           onPress={this.closeShare.bind(this)}>
             <Text>取消</Text>
           </TouchableOpacity>
         </Animated.View>
       </TouchableOpacity>
-    )
+    );
   }
 }
 
@@ -228,7 +228,7 @@ var styles=StyleSheet.create({
       backgroundColor:'#fff',
       paddingBottom:25
   }
-})
+});
 
-export default SetShare
+export default SetShare;
 
